@@ -1,5 +1,7 @@
 package com.example.reportbugui.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.reportbugui.utilities.*
 import com.example.reportbugui.dataprovider.*
@@ -8,18 +10,19 @@ import com.example.reportbugui.dataprovider.*
 class MainActivityViewModel: ViewModel() {
 
     // initialize variables
-    private var userEmail: String = ConstantsCollection.NOT_SELECTED
-    private var userCountry: String = Countries.INDIA
+    var userEmail= MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
+    var bugDescription = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
 
-    private var componentSelected: String = Components.CORE
-    private var bugDescription: String = ConstantsCollection.NOT_SELECTED
+    private var componentSelected= (Components.CORE)
+    private var userCountry= (Countries.INDIA)
 
-    private val listCountries: List<String> = DataProvider.getComponentsList()
-    private val listComponents: List<String> = DataProvider.getComponentsList()
+    private val listCountries= DataProvider.getCountriesList()
+    private val listComponents= DataProvider.getComponentsList()
 
-
-
-
-
-
+    fun getListCountries():ArrayList<String>{
+        return listCountries
+    }
+    fun getListComponents():ArrayList<String>{
+        return listComponents
+    }
 }

@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.reportbugui.viewmodel.MainActivityViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:background="@color/background"
     android:paddingTop="15dp"
@@ -49,6 +58,7 @@
         android:hint="@string/example_mail"
         android:gravity="center_horizontal"
         android:layout_marginTop="50dp"
+        android:text="@={viewModel.userEmail}"
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -70,15 +80,16 @@
         android:textColor="@color/text"
         android:textSize="30sp"/>
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/country_selector_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:background="@color/field"
         />
 
-    <TextView
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/component"
@@ -86,10 +97,10 @@
         android:textColor="@color/text"
         android:layout_marginLeft="100dp"/>
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/component_selector_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:background="@color/field"
         />
@@ -119,6 +130,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginLeft="22dp"
         android:background="@color/field"
+        android:text="@={viewModel.bugDescription}"
         />
 
     <Button
@@ -138,4 +150,4 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
+</layout>
