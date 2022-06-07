@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#545454</color>
+    <color name="fieldr">#A6A6A6</color>
+    <color name="text">#FFFFFF</color>
+    <color name="submit_text">#000000</color>
+
+</resources>
