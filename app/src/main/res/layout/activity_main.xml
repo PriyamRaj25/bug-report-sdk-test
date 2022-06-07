@@ -1,29 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:background="@color/background"
-    android:paddingTop="27dp"
-    android:paddingBottom="27dp"
-    android:paddingLeft="48dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="25dp"
     android:paddingRight="48dp">
+
+    <TextView
+        android:id="@+id/report_bug_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/report_bug"
+        android:textSize="45sp"
+        android:textColor="@color/text"
+        android:drawableStart="@drawable/ic_baseline_bug_report_24" />
+
+    <TextView
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/report_bug_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/email"
+        android:textColor="@color/text"
+        android:textSize="30sp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="520dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/email_text"
+        app:layout_constraintTop_toBottomOf="@+id/report_bug_text"
+        android:layout_marginLeft="50dp"
+        android:background="@color/field"
+        android:textSize="30sp"
+        android:textColor="@color/text"
+        android:hint="@string/example_mail"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_selectors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="90dp"
+        android:orientation="horizontal"
+        >
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/report_bug"
-        android:textSize="50sp"
+        android:text="@string/country"
         android:textColor="@color/text"
-        android:layout_gravity="center_horizontal"
-        android:drawableStart="@drawable/ic_baseline_bug_report_24" />
+        android:textSize="30sp"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/country_selector_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="30dp"
+        android:background="@color/field"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/component"
+        android:textSize="30sp"
+        android:textColor="@color/text"
+        android:layout_marginLeft="100dp"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/component_selector_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/field"
+        />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_selectors"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="50dp"
+        android:textSize="30sp"
+        android:textColor="@color/text"
+        android:text="@string/description"
+        android:layout_marginTop="60dp"
+        />
+
+    <EditText
+        android:layout_width="520dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_selectors"
+        app:layout_constraintStart_toEndOf="@+id/description_text"
+        android:textSize="20sp"
+        android:textColor="@color/text"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="22dp"
+        android:background="@color/field"
+        />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"
+        android:text="SUBMIT"
+        android:background="@color/text"
+        android:textColor="@color/submit_text"
+        />
 
 
 
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

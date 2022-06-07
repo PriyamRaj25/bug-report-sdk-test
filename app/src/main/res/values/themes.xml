@@ -10,4 +10,5 @@
     <style name="Theme.ReportBugUI.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ReportBugUI.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
