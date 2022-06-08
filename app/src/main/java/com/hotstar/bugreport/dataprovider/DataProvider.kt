@@ -8,7 +8,7 @@ class DataProvider {
     companion object{
 
         fun getCountriesList():ArrayList<String>{
-            return arrayListOf<String>(Countries.INDIA, Countries.SOUTH_AFRIFA)
+            return arrayListOf<String>(Countries.INDIA, Countries.SOUTH_AFRICA)
         }
 
         fun getComponentsList():ArrayList<String>{
