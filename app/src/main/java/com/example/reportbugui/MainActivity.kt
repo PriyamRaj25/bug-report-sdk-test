@@ -46,14 +46,15 @@ class MainActivity : ComponentActivity() {
         var listCountries = viewModel.getListCountries()
         var listComponents = viewModel.getListComponents()
 
+
+        //viewModel.country_selector_spinner not working here
         populateDataInSpinner(findViewById(R.id.country_selector_spinner),listCountries)
         populateDataInSpinner(findViewById(R.id.component_selector_spinner),listComponents)
     }
 
     fun populateDataInSpinner(spinner: Spinner, arrayItems: ArrayList<String>){
 
-        var arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, arrayItems)
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        var arrayAdapter = ArrayAdapter(this, R.layout.spinner_item , arrayItems)
         spinner.adapter = arrayAdapter
     }
 

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/focusable_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_bug_report_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/on_focus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/on_focus_button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/spinner_item.xml" value="0.105" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2974884033203125" />
+        <entry key="app/src/main/res/layout/layout_preview.xml" value="0.75" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
