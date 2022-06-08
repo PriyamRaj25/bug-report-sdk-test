@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.reportbugui.viewmodel.MainActivityViewModel" />
+            type="com.hotstar.reportbug.viewmodel.MainActivityViewModel" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

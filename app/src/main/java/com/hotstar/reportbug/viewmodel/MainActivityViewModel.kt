@@ -1,10 +1,11 @@
-package com.example.reportbugui.viewmodel
+package com.hotstar.reportbug.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.reportbugui.utilities.*
-import com.example.reportbugui.dataprovider.*
+import com.hotstar.reportbug.dataprovider.DataProvider
+import com.hotstar.reportbug.utilities.Components
+import com.hotstar.reportbug.utilities.ConstantsCollection
+import com.hotstar.reportbug.utilities.Countries
 
 
 class MainActivityViewModel: ViewModel() {

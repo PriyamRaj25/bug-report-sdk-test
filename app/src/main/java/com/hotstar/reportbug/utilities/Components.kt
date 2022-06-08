@@ -1,4 +1,4 @@
-package com.example.reportbugui.utilities
+package com.hotstar.reportbug.utilities
 
 class Components {
     companion object{
