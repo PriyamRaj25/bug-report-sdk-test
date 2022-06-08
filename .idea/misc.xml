@@ -4,13 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/button.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/focusable.xml" value="0.226" />
         <entry key="app/src/main/res/drawable/focusable_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_bug_report_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/on_disable_button.xml" value="0.1175" />
         <entry key="app/src/main/res/drawable/on_focus.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/on_focus_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/spinner_item.xml" value="0.105" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2974884033203125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4455627441406249" />
         <entry key="app/src/main/res/layout/layout_preview.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.32848324514991184" />
       </map>
     </option>
   </component>

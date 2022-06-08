@@ -6,6 +6,6 @@
     android:layout_height="wrap_content"
     android:textSize="25sp"
     android:textColor="@color/text"
-    android:paddingHorizontal="30dp"
+    android:paddingHorizontal="10dp"
     android:gravity="center_horizontal"
     />
