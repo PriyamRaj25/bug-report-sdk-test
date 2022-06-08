@@ -4,12 +4,16 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.navigation.findNavController
@@ -38,10 +42,36 @@ class MainActivity : ComponentActivity() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        populateData() ;
+        // initialise country and component dropdowns
+        intialiseSpinner()
+
+        // add observer to the user email and bug description strings so as to validate and enable the submit button
+        validateInput()
     }
 
-    fun populateData(){
+
+
+    private fun validateInput(){
+
+        var observer = getObserver()
+
+        // sets the observer to the live data
+        viewModel.bugDescription.observe(this, observer)
+        viewModel.userEmail.observe(this,observer)
+    }
+
+    private fun getObserver():Observer<String>{
+
+        val observer = Observer<String> {
+
+            // Button is enabled only if description is not empty and email is valid
+            (findViewById<Button>(R.id.submit_button)).isEnabled =
+                !(viewModel.bugDescription.value?.isEmpty() == true || (!(isEmailValid(viewModel.userEmail.value))))
+        }
+        return observer
+    }
+
+    private fun intialiseSpinner(){
 
         var listCountries = viewModel.getListCountries()
         var listComponents = viewModel.getListComponents()
@@ -52,15 +82,15 @@ class MainActivity : ComponentActivity() {
         populateDataInSpinner(findViewById(R.id.component_selector_spinner),listComponents)
     }
 
-    fun populateDataInSpinner(spinner: Spinner, arrayItems: ArrayList<String>){
+    private fun populateDataInSpinner(spinner: Spinner, arrayItems: ArrayList<String>){
 
         var arrayAdapter = ArrayAdapter(this, R.layout.spinner_item , arrayItems)
         spinner.adapter = arrayAdapter
     }
 
 
-    fun isEmailValid(email:String):Boolean{
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    private  fun isEmailValid(email:String?):Boolean{
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
 

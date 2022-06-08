@@ -4,5 +4,6 @@
         android:drawable="@drawable/on_focus_button" /> <!-- focused -->
     <item android:state_hovered="true"
         android:drawable="@drawable/on_focus_button" /> <!-- hovered -->
+    <item android:state_enabled="false" android:drawable="@color/field" />
     <item android:drawable="@color/text"/> <!-- default -->
 </selector>

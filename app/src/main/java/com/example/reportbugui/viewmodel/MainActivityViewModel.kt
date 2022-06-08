@@ -10,7 +10,7 @@ import com.example.reportbugui.dataprovider.*
 class MainActivityViewModel: ViewModel() {
 
     // initialize variables
-    var userEmail= MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
+    var userEmail = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
     var bugDescription = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
 
     private var componentSelected= (Components.CORE)
