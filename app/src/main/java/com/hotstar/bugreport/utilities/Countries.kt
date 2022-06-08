@@ -1,4 +1,4 @@
-package com.hotstar.reportbug.utilities
+package com.hotstar.bugreport.utilities
 
 class Countries {
     companion object {

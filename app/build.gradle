@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.hotstar.reportbug'
+    namespace 'com.hotstar.bugreport'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.hotstar.reportbug"
+        applicationId "com.hotstar.bugreport"
         minSdk 21
         targetSdk 32
         versionCode 1

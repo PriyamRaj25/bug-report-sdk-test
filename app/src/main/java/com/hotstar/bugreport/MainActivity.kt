@@ -1,4 +1,4 @@
-package com.hotstar.reportbug
+package com.hotstar.bugreport
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -8,9 +8,9 @@ import androidx.activity.ComponentActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.hotstar.reportbug.R
-import com.hotstar.reportbug.databinding.ActivityMainBinding
-import com.hotstar.reportbug.viewmodel.MainActivityViewModel
+import com.hotstar.bugreport.databinding.ActivityMainBinding
+import com.hotstar.bugreport.viewmodel.MainActivityViewModel
+import com.hotstar.bugreport.R
 
 class MainActivity : ComponentActivity() {
 

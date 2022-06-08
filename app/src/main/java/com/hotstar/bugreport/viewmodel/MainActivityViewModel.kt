@@ -1,11 +1,11 @@
-package com.hotstar.reportbug.viewmodel
+package com.hotstar.bugreport.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.hotstar.reportbug.dataprovider.DataProvider
-import com.hotstar.reportbug.utilities.Components
-import com.hotstar.reportbug.utilities.ConstantsCollection
-import com.hotstar.reportbug.utilities.Countries
+import com.hotstar.bugreport.dataprovider.DataProvider
+import com.hotstar.bugreport.utilities.Components
+import com.hotstar.bugreport.utilities.ConstantsCollection
+import com.hotstar.bugreport.utilities.Countries
 
 
 class MainActivityViewModel: ViewModel() {

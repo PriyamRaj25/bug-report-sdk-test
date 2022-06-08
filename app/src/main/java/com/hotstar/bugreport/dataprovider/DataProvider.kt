@@ -1,7 +1,7 @@
-package com.hotstar.reportbug.dataprovider
+package com.hotstar.bugreport.dataprovider
 
-import com.hotstar.reportbug.utilities.Components
-import com.hotstar.reportbug.utilities.Countries
+import com.hotstar.bugreport.utilities.Components
+import com.hotstar.bugreport.utilities.Countries
 
 class DataProvider {
 
