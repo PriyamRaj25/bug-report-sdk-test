@@ -3,41 +3,50 @@ ext.versions = [:]
 
 def versions = [:]
 versions.lifecycle = '2.2.0'
+versions.lifecycletesting = '2.1.0'
+versions.lifecycleviewmodel = '2.4.1'
+versions.navigation = '2.4.2'
+versions.material = '1.4.0'
+versions.core = '1.7.0'
+versions.leanback = '1.0.0'
+versions.appcombat = '1.4.2'
+versions.contraintlayout = '2.1.4'
+
 
 
 def lifecycle = [:]
 lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
 lifecycle.reactivestreams = "androidx.lifecycle:lifecycle-reactivestreams:$versions.lifecycle"
 lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
-lifecycle.testing = "androidx.arch.core:core-testing:2.1.0"
-lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+lifecycle.testing = "androidx.arch.core:core-testing:$versions.lifecycletesting"
+lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleviewmodel"
+lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleviewmodel"
 deps.lifecycle = lifecycle
 
 def navigation = [:]
-navigation.fragment = "androidx.navigation:navigation-fragment-ktx:2.4.2"
-navigation.ui = "androidx.navigation:navigation-ui-ktx:2.4.2"
+navigation.fragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
 deps.navigation = navigation
 
 
 def material = [:]
-material.material = "com.google.android.material:material:1.4.0"
+material.material = "com.google.android.material:material:$versions.material"
 deps.material = material
 
 def core = [:]
-core.ktx = "androidx.core:core-ktx:1.7.0"
+core.ktx = "androidx.core:core-ktx:$versions.core"
 deps.core = core
 
 def leanback = [:]
-leanback.leanback = "androidx.leanback:leanback:1.0.0"
+leanback.leanback = "androidx.leanback:leanback:$versions.leanback"
 deps.leanback=leanback
 
 def appcombat = [:]
-appcombat.appcombat = "androidx.appcompat:appcompat:1.4.2"
+appcombat.appcombat = "androidx.appcompat:appcompat:$versions.appcombat"
 deps.appcombat=appcombat
 
 def constraintlayout = [:]
-constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
 deps.constraintlayout = constraintlayout
 
 def error = [:]
