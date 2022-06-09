@@ -2,14 +2,16 @@ ext.deps = [:]
 ext.versions = [:]
 
 def versions = [:]
-versions.lifecycle = '2.4.1'
+versions.lifecycle = '2.2.0'
 
 
 def lifecycle = [:]
 lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
 lifecycle.reactivestreams = "androidx.lifecycle:lifecycle-reactivestreams:$versions.lifecycle"
 lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
-lifecycle.testing = "androidx.arch.core:core-testing:$versions.lifecycle"
+lifecycle.testing = "androidx.arch.core:core-testing:2.1.0"
+lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 deps.lifecycle = lifecycle
 
 def navigation = [:]
@@ -35,10 +37,12 @@ appcombat.appcombat = "androidx.appcompat:appcompat:1.4.2"
 deps.appcombat=appcombat
 
 def constraintlayout = [:]
-constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4'"
+constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 deps.constraintlayout = constraintlayout
 
+def error = [:]
+error.duplicateclass = "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+deps.error=error
+
+
 def gradle = [:]
-
-
-//TODO : add other dependencies as well
