@@ -1,18 +1,18 @@
 dependencies {
 
 
-//    implementation deps.material.material
-//    implementation deps.core.ktx
-//    implementation deps.leanback.leanback
-//    implementation deps.appcombat.appcombat
-//    implementation deps.constraintlayout.constraintlayout
-////    implementation deps.navigation.fragment
-////    implementation deps.navigation.uigit
-//    implementation deps.lifecycle.extensions
-//    implementation deps.lifecycle.reactivestreams
-//    implementation deps.lifecycle.compiler
-//    implementation deps.lifecycle.testing
-////    implementation deps.lifecycle.viewmodel
-////    implementation deps.lifecycle.livedata
-//    implementation deps.error.duplicateclass
+    implementation deps.material.material
+    implementation deps.core.ktx
+    implementation deps.leanback.leanback
+    implementation deps.appcombat.appcombat
+    implementation deps.constraintlayout.constraintlayout
+//    implementation deps.navigation.fragment
+//    implementation deps.navigation.uigit
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.reactivestreams
+    implementation deps.lifecycle.compiler
+    implementation deps.lifecycle.testing
+//    implementation deps.lifecycle.viewmodel
+//    implementation deps.lifecycle.livedata
+    implementation deps.error.duplicateclass
 }
