@@ -8,25 +8,25 @@ import androidx.activity.ComponentActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.hotstar.bugreport.databinding.ActivityMainBinding
-import com.hotstar.bugreport.viewmodel.MainActivityViewModel
+import com.hotstar.bugreport.databinding.ActivityBugReportBinding
+import com.hotstar.bugreport.viewmodel.BugReportActivityViewModel
 
 class BugReportActivity : ComponentActivity() {
 
-    private lateinit var viewBinding: ActivityMainBinding
-    private lateinit var viewModel: MainActivityViewModel
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var viewBinding: ActivityBugReportBinding
+    private lateinit var viewModel: BugReportActivityViewModel
+    private lateinit var binding: ActivityBugReportBinding
     private var TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // initialise binding and viewmodel for Data binding
-        viewBinding = ActivityMainBinding.inflate(layoutInflater)
+        viewBinding = ActivityBugReportBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bug_report)
+        viewModel = ViewModelProvider(this).get(BugReportActivityViewModel::class.java)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 

@@ -8,7 +8,7 @@ import com.hotstar.bugreport.utilities.ConstantsCollection
 import com.hotstar.bugreport.utilities.Countries
 
 
-class MainActivityViewModel: ViewModel() {
+class BugReportActivityViewModel: ViewModel() {
 
     // initialize variables
     var userEmail = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
