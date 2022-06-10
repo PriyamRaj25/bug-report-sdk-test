@@ -5,22 +5,22 @@ def versions = [:]
 versions.lifecycle = '2.1.0'
 versions.lifecycletesting = '2.1.0'
 versions.lifecycleviewmodel = '2.1.0'
-versions.navigation = '1.0.0'
-versions.material = '1.4.0'
-versions.core = '1.7.0'
+versions.navigation = '2.4.2'
+versions.material = '1.0.0'
+versions.core = '1.6.0'
 versions.leanback = '1.0.0'
 versions.appcombat = '1.2.0'
-versions.contraintlayout = '2.1.4'
+versions.contraintlayout = '1.1.3'
+
 
 
 def lifecycle = [:]
-lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
-lifecycle.reactivestreams = "androidx.lifecycle:lifecycle-reactivestreams:$versions.lifecycle"
-lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
-lifecycle.testing = "androidx.arch.core:core-testing:$versions.lifecycletesting"
-lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleviewmodel"
-lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleviewmodel"
-lifecycle.viewmode_java
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions"
+lifecycle.reactivestreams = "androidx.lifecycle:lifecycle-reactivestreams"
+lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler"
+lifecycle.testing = "androidx.arch.core:core-testing"
+lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx"
+lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx"
 deps.lifecycle = lifecycle
 
 def navigation = [:]
@@ -46,7 +46,7 @@ appcombat.appcombat = "androidx.appcompat:appcompat:$versions.appcombat"
 deps.appcombat=appcombat
 
 def constraintlayout = [:]
-constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
 deps.constraintlayout = constraintlayout
 
 def error = [:]
