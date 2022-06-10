@@ -1,18 +1,105 @@
+def versions = [:]
+versions.lifecycle = '2.1.0'
+versions.lifecycletesting = '2.1.0'
+versions.lifecycleviewmodel = '2.1.0'
+versions.navigation = '2.4.2'
+versions.material = '1.0.0'
+versions.core = '1.6.0'
+versions.leanback = '1.0.0'
+versions.appcombat = '1.2.0'
+versions.contraintlayout = '1.1.3'
+
 dependencies {
 
+    implementation deps.material.material
+    implementation deps.core.ktx
+    implementation deps.leanback.leanback
+    implementation deps.appcombat.appcombat
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    implementation deps.navigation.fragment
+//    implementation deps.navigation.ui
 
-//    implementation deps.material.material
-//    implementation deps.core.ktx
-//    implementation deps.leanback.leanback
-//    implementation deps.appcombat.appcombat
-//    implementation deps.constraintlayout.constraintlayout
-////    implementation deps.navigation.fragment
-////    implementation deps.navigation.uigit
-//    implementation deps.lifecycle.extensions
-//    implementation deps.lifecycle.reactivestreams
-//    implementation deps.lifecycle.compiler
-//    implementation deps.lifecycle.testing
-////    implementation deps.lifecycle.viewmodel
-////    implementation deps.lifecycle.livedata
-//    implementation deps.error.duplicateclass
+
+    implementation(deps.lifecycle.extensions){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+    implementation(deps.lifecycle.reactivestreams){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+    implementation(deps.lifecycle.compiler){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+
+    implementation(deps.lifecycle.testing){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+
+    implementation(deps.lifecycle.viewmodel){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+
+
+    implementation(deps.lifecycle.livedata){
+        version {
+            strictly versions.lifecycle
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-runtime-ktx'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-process'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-service'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-runtime'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-viewmodel'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-livedata'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+
+    implementation('androidx.lifecycle:lifecycle-livedata-core'){
+        version{
+            strictly '2.3.0'
+        }
+    }
+    implementation deps.lifecycle.reactivestreams
+    implementation deps.lifecycle.compiler
+    implementation deps.lifecycle.testing
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.livedata
+    implementation deps.error.duplicateclass
 }
