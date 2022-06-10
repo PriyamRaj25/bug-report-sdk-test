@@ -5,8 +5,8 @@ dependencies {
     implementation deps.leanback.leanback
     implementation deps.appcombat.appcombat
     implementation deps.constraintlayout.constraintlayout
-    implementation deps.navigation.fragment
-    implementation deps.navigation.ui
+//    implementation deps.navigation.fragment
+//    implementation deps.navigation.uigit
     implementation deps.lifecycle.extensions
     implementation deps.lifecycle.reactivestreams
     implementation deps.lifecycle.compiler
