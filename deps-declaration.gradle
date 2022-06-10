@@ -2,16 +2,15 @@ ext.deps = [:]
 ext.versions = [:]
 
 def versions = [:]
-versions.lifecycle = '2.2.0'
+versions.lifecycle = '2.1.0'
 versions.lifecycletesting = '2.1.0'
-versions.lifecycleviewmodel = '2.4.1'
-versions.navigation = '2.4.2'
+versions.lifecycleviewmodel = '2.1.0'
+versions.navigation = '1.0.0'
 versions.material = '1.4.0'
 versions.core = '1.7.0'
 versions.leanback = '1.0.0'
 versions.appcombat = '1.4.2'
 versions.contraintlayout = '2.1.4'
-
 
 
 def lifecycle = [:]
