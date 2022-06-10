@@ -10,9 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.hotstar.bugreport.databinding.ActivityMainBinding
 import com.hotstar.bugreport.viewmodel.MainActivityViewModel
-import com.hotstar.bugreport.R
 
-class MainActivity : ComponentActivity() {
+class BugReportActivity : ComponentActivity() {
 
     private lateinit var viewBinding: ActivityMainBinding
     private lateinit var viewModel: MainActivityViewModel

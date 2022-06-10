@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReportBugUI">
 
-        <activity android:name="com.hotstar.bugreport.MainActivity"
+        <activity android:name="com.hotstar.bugreport.BugReportActivity"
             android:exported="true"
             android:banner="@drawable/lb_ic_pause"
             android:icon="@drawable/lb_action_bg"
