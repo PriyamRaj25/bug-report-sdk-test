@@ -20,6 +20,7 @@ lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
 lifecycle.testing = "androidx.arch.core:core-testing:$versions.lifecycletesting"
 lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleviewmodel"
 lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleviewmodel"
+lifecycle.viewmode_java
 deps.lifecycle = lifecycle
 
 def navigation = [:]
