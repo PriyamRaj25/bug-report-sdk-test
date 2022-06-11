@@ -11,7 +11,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class BugReportButton {
 
     companion object {
-        fun addButton(myContext: Context) {
+        fun addButton(myContext: Context):FloatingActionButton{
 
             val currentActivity = myContext as Activity
             val parentViewGroup =
@@ -36,6 +36,8 @@ class BugReportButton {
                 val intent = Intent(myContext,BugReportActivity::class.java)
                 startActivity(myContext,intent,null)
             }
+
+            return floatingButton
         }
     }
 }

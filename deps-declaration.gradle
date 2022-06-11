@@ -46,7 +46,7 @@ appcombat.appcombat = "androidx.appcompat:appcompat:$versions.appcombat"
 deps.appcombat=appcombat
 
 def constraintlayout = [:]
-constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:2.1.4"
+constraintlayout.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.contraintlayout"
 deps.constraintlayout = constraintlayout
 
 def error = [:]

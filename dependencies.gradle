@@ -15,10 +15,7 @@ dependencies {
     implementation deps.core.ktx
     implementation deps.leanback.leanback
     implementation deps.appcombat.appcombat
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-//    implementation deps.navigation.fragment
-//    implementation deps.navigation.ui
-
+    implementation deps.constraintlayout.constraintlayout
 
     implementation(deps.lifecycle.extensions){
         version {
@@ -96,10 +93,6 @@ dependencies {
             strictly '2.3.0'
         }
     }
-    implementation deps.lifecycle.reactivestreams
-    implementation deps.lifecycle.compiler
-    implementation deps.lifecycle.testing
-    implementation deps.lifecycle.viewmodel
-    implementation deps.lifecycle.livedata
+
     implementation deps.error.duplicateclass
 }
