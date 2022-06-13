@@ -16,83 +16,91 @@ dependencies {
     implementation deps.leanback.leanback
     implementation deps.appcombat.appcombat
     implementation deps.constraintlayout.constraintlayout
+//
+//    implementation(deps.lifecycle.extensions){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
+//    implementation(deps.lifecycle.reactivestreams){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
+//    implementation(deps.lifecycle.compiler){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
+//
+//    implementation(deps.lifecycle.testing){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
+//
+//    implementation(deps.lifecycle.viewmodel){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
+//
+//
+//    implementation(deps.lifecycle.livedata){
+//        version {
+//            versions.lifecycle
+//        }
+//    }
 
-    implementation(deps.lifecycle.extensions){
-        version {
-            strictly versions.lifecycle
-        }
-    }
-    implementation(deps.lifecycle.reactivestreams){
-        version {
-            strictly versions.lifecycle
-        }
-    }
-    implementation(deps.lifecycle.compiler){
-        version {
-            strictly versions.lifecycle
-        }
-    }
+    implementation('androidx.lifecycle:lifecycle-runtime-ktx:2.3.0')
 
-    implementation(deps.lifecycle.testing){
-        version {
-            strictly versions.lifecycle
-        }
-    }
+//    implementation('androidx.lifecycle:lifecycle-runtime-ktx'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
+    implementation('androidx.lifecycle:lifecycle-process:2.3.0')
+//    implementation('androidx.lifecycle:lifecycle-process'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
 
-    implementation(deps.lifecycle.viewmodel){
-        version {
-            strictly versions.lifecycle
-        }
-    }
+    implementation('androidx.lifecycle:lifecycle-service:2.3.0')
+//
+//    implementation('androidx.lifecycle:lifecycle-service'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
+    implementation('androidx.lifecycle:lifecycle-runtime:2.3.0')
+//    implementation('androidx.lifecycle:lifecycle-runtime'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
 
 
-    implementation(deps.lifecycle.livedata){
-        version {
-            strictly versions.lifecycle
-        }
-    }
+    implementation('androidx.lifecycle:lifecycle-viewmodel:2.3.0')
+//    implementation('androidx.lifecycle:lifecycle-viewmodel'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
 
-    implementation('androidx.lifecycle:lifecycle-runtime-ktx'){
-        version{
-            strictly '2.3.0'
-        }
-    }
+    implementation('androidx.lifecycle:lifecycle-livedata:2.3.0')
+//    implementation('androidx.lifecycle:lifecycle-livedata'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
 
-    implementation('androidx.lifecycle:lifecycle-process'){
-        version{
-            strictly '2.3.0'
-        }
-    }
-
-    implementation('androidx.lifecycle:lifecycle-service'){
-        version{
-            strictly '2.3.0'
-        }
-    }
-
-    implementation('androidx.lifecycle:lifecycle-runtime'){
-        version{
-            strictly '2.3.0'
-        }
-    }
-
-    implementation('androidx.lifecycle:lifecycle-viewmodel'){
-        version{
-            strictly '2.3.0'
-        }
-    }
-
-    implementation('androidx.lifecycle:lifecycle-livedata'){
-        version{
-            strictly '2.3.0'
-        }
-    }
-
-    implementation('androidx.lifecycle:lifecycle-livedata-core'){
-        version{
-            strictly '2.3.0'
-        }
-    }
+    implementation('androidx.lifecycle:lifecycle-livedata-core:2.3.0')
+//    implementation('androidx.lifecycle:lifecycle-livedata-core'){
+//        version{
+//             '2.3.0'
+//        }
+//    }
 
     implementation deps.error.duplicateclass
 }
