@@ -1,106 +1,21 @@
-def versions = [:]
-versions.lifecycle = '2.1.0'
-versions.lifecycletesting = '2.1.0'
-versions.lifecycleviewmodel = '2.1.0'
-versions.navigation = '2.4.2'
-versions.material = '1.0.0'
-versions.core = '1.6.0'
-versions.leanback = '1.0.0'
-versions.appcombat = '1.2.0'
-versions.contraintlayout = '1.1.3'
-
 dependencies {
-
     implementation deps.material.material
     implementation deps.core.ktx
     implementation deps.leanback.leanback
     implementation deps.appcombat.appcombat
     implementation deps.constraintlayout.constraintlayout
-//
-//    implementation(deps.lifecycle.extensions){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-//    implementation(deps.lifecycle.reactivestreams){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-//    implementation(deps.lifecycle.compiler){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-//
-//    implementation(deps.lifecycle.testing){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-//
-//    implementation(deps.lifecycle.viewmodel){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-//
-//
-//    implementation(deps.lifecycle.livedata){
-//        version {
-//            versions.lifecycle
-//        }
-//    }
-
-    implementation('androidx.lifecycle:lifecycle-runtime-ktx:2.3.0')
-
-//    implementation('androidx.lifecycle:lifecycle-runtime-ktx'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-    implementation('androidx.lifecycle:lifecycle-process:2.3.0')
-//    implementation('androidx.lifecycle:lifecycle-process'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-
-    implementation('androidx.lifecycle:lifecycle-service:2.3.0')
-//
-//    implementation('androidx.lifecycle:lifecycle-service'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-    implementation('androidx.lifecycle:lifecycle-runtime:2.3.0')
-//    implementation('androidx.lifecycle:lifecycle-runtime'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-
-
-    implementation('androidx.lifecycle:lifecycle-viewmodel:2.3.0')
-//    implementation('androidx.lifecycle:lifecycle-viewmodel'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-
-    implementation('androidx.lifecycle:lifecycle-livedata:2.3.0')
-//    implementation('androidx.lifecycle:lifecycle-livedata'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-
-    implementation('androidx.lifecycle:lifecycle-livedata-core:2.3.0')
-//    implementation('androidx.lifecycle:lifecycle-livedata-core'){
-//        version{
-//             '2.3.0'
-//        }
-//    }
-
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.reactivestreams
+    implementation deps.lifecycle.compiler
+    implementation deps.lifecycle.testing
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.livedata
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.process
+    implementation deps.lifecycle.service
+    implementation deps.lifecycle.runtime_java
+    implementation deps.lifecycle.viewmodel_java
+    implementation deps.lifecycle.livedata_java
+    implementation deps.lifecycle.livedata_java_core
     implementation deps.error.duplicateclass
 }
