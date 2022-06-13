@@ -20,6 +20,7 @@ class BugReportActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.setFinishOnTouchOutside(false);
 
         // initialise binding and viewmodel for Data binding
         viewBinding = ActivityBugReportBinding.inflate(layoutInflater)

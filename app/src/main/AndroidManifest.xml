@@ -20,7 +20,10 @@
 
         <activity android:name="com.hotstar.bugreport.BugReportActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog"
+            android:excludeFromRecents="true"
+            >
         </activity>
 
     </application>
