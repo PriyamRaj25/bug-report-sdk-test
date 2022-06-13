@@ -14,15 +14,11 @@
         android:name="android.software.leanback"
         android:required="false" />
 
-    <application
-
-        >
+    <application>
 
         <activity android:name="com.hotstar.bugreport.BugReportActivity"
             android:exported="true"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Dialog"
-            android:excludeFromRecents="true"
             >
         </activity>
 
