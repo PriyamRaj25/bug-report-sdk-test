@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bug_report_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/focusable.xml" value="0.226" />
         <entry key="app/src/main/res/drawable/focusable_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_bug_report_24.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/ic_bug_report_red.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/on_disable_button.xml" value="0.1175" />
         <entry key="app/src/main/res/drawable/on_focus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/on_focus_bug_report_button.xml" value="0.2005" />
         <entry key="app/src/main/res/drawable/on_focus_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/spinner_item.xml" value="0.105" />
+        <entry key="app/src/main/res/layout/activity_bug_report.xml" value="0.3880208333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_preview.xml" value="0.75" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.32848324514991184" />
