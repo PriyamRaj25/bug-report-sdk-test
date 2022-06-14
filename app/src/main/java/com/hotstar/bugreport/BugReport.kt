@@ -59,14 +59,10 @@ class BugReport(){
             return bugReportButton
         }
 
-        fun invokeBugReportByLongPress(event: KeyEvent?, context:Context):Boolean{
+        fun invokeBugReportByLongPress(event: KeyEvent?, context:Context){
 
-            if (event?.action == KeyEvent.ACTION_DOWN && event.isLongPress && event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT ) {
-
+            if ( (event?.action == KeyEvent.ACTION_DOWN) && event.isLongPress && (event.keyCode == KeyEvent.KEYCODE_DPAD_CENTER))
                 openBugReportActivity(context)
-                return true
-            }
-            return false
         }
 
 
