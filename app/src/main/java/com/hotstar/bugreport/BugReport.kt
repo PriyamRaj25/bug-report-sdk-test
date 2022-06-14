@@ -61,7 +61,7 @@ class BugReport(){
 
         fun invokeBugReportByLongPress(event: KeyEvent?, context:Context):Boolean{
 
-            if (event?.action == KeyEvent.ACTION_DOWN && event.isLongPress && event.keyCode == KeyEvent.KEYCODE_DPAD_CENTER ) {
+            if (event?.action == KeyEvent.ACTION_DOWN && event.isLongPress && event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT ) {
 
                 openBugReportActivity(context)
                 return true
