@@ -2,31 +2,33 @@ package com.hotstar.bugreport
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.usage.UsageEvents.Event
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.view.KeyEvent
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 import androidx.core.content.ContextCompat.startActivity
 import com.hotstar.bugreport.R
 
+class BugReport(){
 
-class BugReportButton {
+    companion object{
 
-    companion object {
+        fun addButton(context: Context):Button{
 
-        fun addButton(myContext: Context):Button{
-
-            val currentActivity = myContext as Activity
+            val currentActivity = context as Activity
             val parentViewGroup =
                 (currentActivity.findViewById(android.R.id.content) as ViewGroup).getChildAt(0) as ViewGroup
 
-            val bugReportButton = Button(myContext)
+            val bugReportButton = Button(context)
 
             //TODO different layout types would have different layout_params
 
@@ -51,12 +53,30 @@ class BugReportButton {
 
             parentViewGroup.addView(bugReportButton)
             bugReportButton.setOnClickListener {
-
-                val intent = Intent(myContext,BugReportActivity::class.java)
-                startActivity(myContext,intent,null)
+                openBugReportActivity(context)
             }
 
             return bugReportButton
         }
+
+        fun invokeBugReportByLongPress(event: KeyEvent?, context:Context):Boolean{
+
+            if (event?.action == KeyEvent.ACTION_DOWN && event.isLongPress && event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT ) {
+
+                openBugReportActivity(context)
+                return true
+            }
+            return false
+        }
+
+
+        private fun openBugReportActivity(context: Context){
+            val intent = Intent(context,BugReportActivity::class.java)
+            startActivity(context,intent,null)
+        }
     }
+
+
+
+
 }
