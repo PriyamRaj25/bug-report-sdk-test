@@ -1,5 +1,6 @@
 package com.hotstar.bugreport
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -10,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.hotstar.bugreport.databinding.ActivityBugReportBinding
+import com.hotstar.bugreport.dataprovider.DataProvider
 import com.hotstar.bugreport.viewmodel.BugReportActivityViewModel
 
 class BugReportActivity : ComponentActivity() {
@@ -17,11 +19,10 @@ class BugReportActivity : ComponentActivity() {
     private lateinit var viewBinding: ActivityBugReportBinding
     private lateinit var viewModel: BugReportActivityViewModel
     private lateinit var binding: ActivityBugReportBinding
+    private lateinit var supportedDomains: ArrayList<String>
+
     private var TAG = "MainActivity"
 
-    companion object {
-        lateinit var  context:Context
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,9 @@ class BugReportActivity : ComponentActivity() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        context=this
+        // get List of Domains
+        supportedDomains = DataProvider.getSupportedDomainsList(this)
+
         // initialise country and component dropdowns
         intialiseSpinner()
 
@@ -66,8 +69,8 @@ class BugReportActivity : ComponentActivity() {
 
     private fun intialiseSpinner(){
 
-        var listCountries = viewModel.getListCountries()
-        var listComponents = viewModel.getListComponents()
+        var listCountries= viewModel.getListCountries()
+        var listComponents= viewModel.getListComponents()
 
 
         //viewModel.country_selector_spinner not working here
@@ -77,13 +80,22 @@ class BugReportActivity : ComponentActivity() {
 
     private fun populateDataInSpinner(spinner: Spinner, arrayItems: ArrayList<String>){
 
-        var arrayAdapter = ArrayAdapter(this, R.layout.spinner_item, arrayItems)
-        spinner.adapter = arrayAdapter
+        var arrayAdapter= ArrayAdapter(this, R.layout.spinner_item, arrayItems)
+        spinner.adapter= arrayAdapter
     }
 
 
     private  fun isEmailValid(email:String?):Boolean{
 
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        var isValidDomain=false
+        // checks if the email domain is supported
+        for(domain in supportedDomains){
+            if( email?.endsWith(domain) == true ) {
+                isValidDomain = true
+                break
+            }
+        }
+
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() && isValidDomain
     }
 }
