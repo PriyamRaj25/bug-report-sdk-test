@@ -3,6 +3,7 @@ package com.hotstar.bugreport
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
@@ -92,6 +93,8 @@ class BugReportActivity : ComponentActivity() {
         for(domain in supportedDomains){
             if( email?.endsWith(domain) == true ) {
                 isValidDomain = true
+
+                Log.d("PRIYAM SDK", "Email"+email + " Domain "+domain)
                 break
             }
         }
