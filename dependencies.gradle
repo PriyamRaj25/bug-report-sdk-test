@@ -1,5 +1,4 @@
 dependencies {
-    implementation('com.hotstar.hstools:hstools-android:1.1.1')
     implementation deps.material.material
     implementation deps.core.ktx
     implementation deps.leanback.leanback
