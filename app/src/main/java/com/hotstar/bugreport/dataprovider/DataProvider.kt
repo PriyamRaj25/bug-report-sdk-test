@@ -1,18 +1,10 @@
 package com.hotstar.bugreport.dataprovider
 
-import android.app.PendingIntent.getActivity
 import android.content.Context
-import android.util.Log
-import com.hotstar.bugreport.BugReport
-import com.hotstar.bugreport.BugReportActivity
 import com.hotstar.bugreport.R
-import com.hotstar.bugreport.utilities.Components
-import com.hotstar.bugreport.utilities.Countries
-import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
-import java.io.InputStream
 
 class DataProvider {
 
