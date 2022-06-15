@@ -24,6 +24,8 @@ class BugReport(){
 
         fun addButton(context: Context):Button{
 
+
+
             val currentActivity = context as Activity
             val parentViewGroup =
                 (currentActivity.findViewById(android.R.id.content) as ViewGroup).getChildAt(0) as ViewGroup
