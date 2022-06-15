@@ -88,17 +88,23 @@ class BugReportActivity : ComponentActivity() {
 
     private  fun isEmailValid(email:String?):Boolean{
 
+        if(email!=null)
+            Log.d("PRIYAM SDK", email)
+        else
+            Log.d("PRIYAM SDK","empty mail")
+
+
         var isValidDomain=false
         // checks if the email domain is supported
         for(domain in supportedDomains){
-            if( email?.endsWith(domain) == true ) {
+            if( (email?.endsWith(domain)) == true ) {
                 isValidDomain = true
 
-                Log.d("PRIYAM SDK", "Email"+email + " Domain "+domain)
-                break
+                Log.d("PRIYAM SDK", "Email$email Domain $domain")
             }
         }
 
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() && isValidDomain
+        return isValidDomain
+//        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() && isValidDomain
     }
 }
