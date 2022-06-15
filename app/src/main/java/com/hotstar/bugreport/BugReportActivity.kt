@@ -33,7 +33,7 @@ class BugReportActivity : ComponentActivity() {
         setContentView(viewBinding.root)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_bug_report)
-        viewModel = ViewModelProvider(this).get(BugReportActivityViewModel::class.java)
+        viewModel = ViewModelProvider(this)[BugReportActivityViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
