@@ -1,0 +1,22 @@
+dependencies {
+    implementation('com.hotstar.hstools:hstools-android:1.1.1')
+    implementation deps.material.material
+    implementation deps.core.ktx
+    implementation deps.leanback.leanback
+    implementation deps.appcombat.appcombat
+    implementation deps.constraintlayout.constraintlayout
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.reactivestreams
+    implementation deps.lifecycle.compiler
+    implementation deps.lifecycle.testing
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.livedata
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.process
+    implementation deps.lifecycle.service
+    implementation deps.lifecycle.runtime_java
+    implementation deps.lifecycle.viewmodel_java
+    implementation deps.lifecycle.livedata_java
+    implementation deps.lifecycle.livedata_java_core
+    implementation deps.error.duplicateclass
+}

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    namespace 'com.hotstar.bugreport'
+    compileSdk 30
+
+    defaultConfig {
+        minSdk 19
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+repositories {
+    maven {
+        url 'https://nexus.hotstar.com/repository/android-snapshot/'
+        credentials {
+            username = 'android'
+            password = 'password@123'
+        }
+    }
+}
+
+apply from: '../dependencies.gradle'
