@@ -1,5 +1,6 @@
 package com.hotstar.bugreport
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -18,6 +19,10 @@ class BugReportActivity : ComponentActivity() {
     private lateinit var binding: ActivityBugReportBinding
     private var TAG = "MainActivity"
 
+    companion object {
+        lateinit var  context:Context
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setFinishOnTouchOutside(false);
@@ -31,14 +36,13 @@ class BugReportActivity : ComponentActivity() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
+        context=this
         // initialise country and component dropdowns
         intialiseSpinner()
 
         // add observer to the user email and bug description strings so as to validate and enable the submit button
         validateInput()
     }
-
-
 
     private fun validateInput(){
 
