@@ -16,8 +16,8 @@ class BugReportActivityViewModel(application: Application) : AndroidViewModel(ap
     var userEmail = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
     var bugDescription = MutableLiveData<String>(ConstantsCollection.NOT_SELECTED)
 
-    private val listCountries= DataProvider.getCountriesList(application)
-    private val listComponents= DataProvider.getComponentsList(application)
+    private val listCountries= DataProvider.getCountriesList(application.applicationContext)
+    private val listComponents= DataProvider.getComponentsList(application.applicationContext)
 
     private var componentSelected= (listComponents[0])
     private var userCountry= (listCountries[0])
